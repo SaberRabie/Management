@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+		
+<style type="text/css">
+	.work-panel{ float:left; padding:20px; border:solid gray 4px; margin:5px;}
+.work-panel .img-caption{display:none; background:white; opacity:.5; position:absolute;}
+
+</style>
+</head>
+
+<body>
+<div class="work-panel">
+
+        <div class="img-caption">this is my caption</div>
+        <img src='http://dribbble.com/system/users/22122/screenshots/244072/empirestate02_d_teaser.png?1314126367'/>
+ 
+</div>
+
+<script src="http://code.jquery.com/jquery-1.6.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+	$('.work-panel').mouseenter(function(){
+    var image= $(this).find('img'),
+        caption = $(this).find('div');
+    
+    caption.width(image.width());
+    caption.height(image.height());
+    caption.fadeIn();
+}).mouseleave(function(){
+     var image= $(this).find('img'),
+        caption = $(this).find('div');
+    
+    caption.width(image.width());
+    caption.height(image.height());
+    caption.fadeOut();
+});
+
+</script>
+
+</body>
+</html>
